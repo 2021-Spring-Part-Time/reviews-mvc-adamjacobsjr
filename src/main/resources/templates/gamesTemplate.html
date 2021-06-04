@@ -1,18 +1,21 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>A List of All Available Courses</title>
+  <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+  <link href="style.css" rel = "stylesheet">
+  <title>A List of Games</title>
 </head>
 <body>
 
 <header>
-  <h1>A List of All Courses</h1>
+  <h1>Game Reviews</h1>
 </header>
 
 <main>
-  <ul>
-    <li th:each="game: ${gamesModel}"><a th:href="@{/game(id=${game.id})}" th:text="${game.name}"></a></li>
-  </ul>
+  <div class="grid-container">
+    <p th:each="game: ${gamesModel}"><a th:href="@{/game(id=${game.id})}"><img th:src="${game.image}"></a>
+      <span th:text ="${game.name}"></span></span></p>
+    </div>
 </main>
 
 <footer>
@@ -21,3 +24,4 @@
 
 </body>
 </html>
+
