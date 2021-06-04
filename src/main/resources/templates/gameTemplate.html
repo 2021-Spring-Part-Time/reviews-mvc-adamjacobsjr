@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${gameModel.name}">A Game</title>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${gameModel.name}">A Game</h1>
+</header>
+
+<main>
+    <ol>
+        <p><li><a href="/games">Games</a></li></p>
+        <li th:text="${gameModel.name}"></li>
+    </ol>
+    <h2 th:text="${gameModel.description}"></h2>
+</main>
+
+<footer>
+    <small>Copyright South Harmon Institute of Technology 2018</small>
+</footer>
+
+</body>
+</html>

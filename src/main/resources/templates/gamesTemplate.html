@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>A List of All Available Courses</title>
+</head>
+<body>
+
+<header>
+  <h1>A List of All Courses</h1>
+</header>
+
+<main>
+  <ul>
+    <li th:each="game: ${gamesModel}"><a th:href="@{/game(id=${game.id})}" th:text="${game.name}"></a></li>
+  </ul>
+</main>
+
+<footer>
+  <small>&copy wcci 2021</small>
+</footer>
+
+</body>
+</html>
