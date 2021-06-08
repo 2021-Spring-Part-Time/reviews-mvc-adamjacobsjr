@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <link href="style.css" rel = "stylesheet">
+    <title th:text="${gameModel.name}">A Game</title>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${gameModel.name}">A Game</h1>
+</header>
+
+<main>
+    <ol>
+        <p><li><a href="/games"><u>Back to reviews</u></a></li></p>
+        <br>
+
+        <b><li th:text="${gameModel.name}"></li></b>
+        <br>
+        <a><img th:src="${gameModel.image}"></a>
+    </ol>
+    <p><h2 th:text="${gameModel.description}"></h2></p>
+    <br>
+    <p><h2 th:text="${gameModel.review}"></h2></p>
+    <br>
+    <p><h2 th:text="${gameModel.score}"></h2></p>
+</main>
+
+<footer>
+    <small>&copy wcci 2021</small>
+</footer>
+
+</body>
+</html>

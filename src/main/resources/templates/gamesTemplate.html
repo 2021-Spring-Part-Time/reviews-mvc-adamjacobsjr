@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+  <link href="style.css" rel = "stylesheet">
+  <title>A List of Games</title>
+</head>
+<body>
+
+<header>
+  <h1>Game Reviews</h1>
+</header>
+
+<main>
+  <div class="grid-container">
+    <p th:each="game: ${gamesModel}"><a th:href="@{/game(id=${game.id})}"><img th:src="${game.image}"></a>
+      <span th:text ="${game.name}"></span></span></p>
+    </div>
+</main>
+
+<footer>
+  <small>&copy wcci 2021</small>
+</footer>
+
+</body>
+</html>
+
